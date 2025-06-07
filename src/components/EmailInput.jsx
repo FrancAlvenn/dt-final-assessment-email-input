@@ -6,6 +6,9 @@ import { getEmails } from "../services/emails.service.ts";
 
 // -- Franc Alvenn Dela Cruz
 
+// For Improvements:
+// I think the readability can be improved if I just seperated the components and added some utils especially for the validate and loader
+
 const EmailInput = () => {
     const [emailList, setEmailList] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -108,7 +111,7 @@ const EmailInput = () => {
             {loading && <img src="https://i.gifer.com/DzUd.gif" className="loader" alt="Description" />}
         </div>
     </div>
-    {searchQuery && <div className="dropdownWrapper">
+    {(searchQuery && filteredEmails.length > 0) && <div className="dropdownWrapper">
         <ul className="dropdownContainer">
             {filteredEmails.map((email, index) => (
                 <li key={index} className="dropdownItem" onClick={() => handleSelectEmail(email)}>
