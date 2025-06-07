@@ -99,7 +99,7 @@ const EmailInput = () => {
                 <li className="inputContainer">
                     <input
                         type="text"
-                        placeholder="Enter Recipients..."
+                        placeholder={selectedEmails.length > 0 ? "" : "Enter Recipients..."}
                         className="emailInput"
                         onChange={(e)=>{handleSearch(e);loader()}}
                         onKeyUp={handleOnKeyUp}
