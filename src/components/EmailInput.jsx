@@ -1,6 +1,11 @@
 import  React, { useState, useEffect } from "react";
 import { getEmails } from "../services/emails.service.ts";
 
+// This is my Final Assessment for the Direcho Trabaho - Web Development with React.js Porgram
+// The styling of the Email Input was taken from the example codes CSS file
+
+// -- Franc Alvenn Dela Cruz
+
 const EmailInput = () => {
     const [emailList, setEmailList] = useState([]);
     const [loading, setLoading] = useState(false);
